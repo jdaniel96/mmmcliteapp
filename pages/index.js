@@ -43,6 +43,7 @@ export default function Home() {
         autoPlay
         muted
         loop
+        playsInline
         id="myVideo"
       >
         <source src="../assets/SpaceBackgroundVideo.mp4" type="video/mp4" />

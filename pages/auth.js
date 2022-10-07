@@ -12,6 +12,7 @@ export default function Auth() {
         muted
         loop
         id="myVideo"
+        playsInline
       >
         <source src="../assets/SpaceBackgroundVideo.mp4" type="video/mp4" />
       </video>
