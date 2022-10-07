@@ -1,0 +1,49 @@
+.videoContainer {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    z-index: 0;
+}
+
+.container{
+    width: 20em;
+    height: 25em;
+    background-color: rgba(40, 40, 40, 0.565);
+    position: absolute;
+    z-index: 1;
+    margin-right: auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5em;
+    border-radius: 0.5em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid green;
+    padding-top: 3em;
+    transition: all 1s ease;
+}
+
+.binance {
+    transition: all 1s ease-in-out;
+
+   
+}
+
+.binance:hover {
+    transform: scale(0.8);
+    transition: all 0.5s ease-in-out;
+    
+}
+
+.metamask {
+    transition: all 0.5s ease-in-out;
+    opacity: 0.9;
+}
+
+.metamask:hover {
+    transform: scale(0.8);
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+}
