@@ -8,11 +8,11 @@ export default function Auth() {
     <>
       <video
         className={landingPageStyles.videoContainer}
-        autoPlay
-        muted
-        loop
+        autoPlay={true}
+        muted={true}
+        loop={true}
         id="myVideo"
-        playsInline
+        controls={false}
       >
         <source src="../assets/SpaceBackgroundVideo.mp4" type="video/mp4" />
       </video>

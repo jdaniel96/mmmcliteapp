@@ -40,10 +40,9 @@ export default function Home() {
     <>
       <video
         className={landingPageStyles.videoContainer}
-        autoPlay
-        muted
-        loop
-        playsInline
+        autoPlay={true}
+        muted={true}
+        loop={true}
         id="myVideo"
       >
         <source src="../assets/SpaceBackgroundVideo.mp4" type="video/mp4" />
