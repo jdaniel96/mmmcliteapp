@@ -13,9 +13,9 @@ export default function Auth() {
         loop={true}
         id="myVideo"
         controls={false}
-      >
-        <source src="../assets/SpaceBackgroundVideo.mp4" type="video/mp4" />
-      </video>
+        playsInline={true}
+        src="../assets/SpaceBackgroundVideo.mp4"
+      />
 
       <CarouselNFT />
     </>
