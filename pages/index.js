@@ -3,17 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container, Col, Row } from "react-bootstrap";
 import landingPageStyles from "../styles/landingPageStyles.module.css";
-import mmmcLogo from "../public/assets/mmmcLogo.png";
-import binanceLogo from "../public/assets/binanceLogo.png";
-import metamaskLogo from "../public/assets/metamaskLogo.png";
+
 import { useWallet } from "@binance-chain/bsc-use-wallet";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
 
+import { CarouselNFT } from "../components/_carousel/carousel";
 export default function Home() {
   const [selectWallet, setSelectWallet] = useState(false);
   const [showButton, setShowButton] = useState(true);
-
   const [binanceWallet, setBinanceWallet] = useState(false);
   const [metamaskWallet, setMetamaskWallet] = useState(false);
 
@@ -38,36 +36,18 @@ export default function Home() {
 
   return (
     <>
-      <video
-        className={landingPageStyles.videoContainer}
-        autoPlay={true}
-        muted={true}
-        loop={true}
-        id="myVideo"
-        controls={false}
-        playsInline={true}
-        src="../assets/SpaceBackgroundVideo.mp4"
-      />
-
       <Container className={landingPageStyles.container}>
         <Col style={{ display: "flex", flexDirection: "column", gap: "1.5em" }}>
-          <Row
-            style={{
-              display: "flex",
-              justifyContent: "space-evenly",
-            }}
-          >
-            <Image width={150} height={150} src={mmmcLogo} alt="mmmc Logo" />
-          </Row>
+          <CarouselNFT />
           <Row
             style={{
               display: "flex",
               justifyContent: "space-evenly",
               alignItems: "start",
-              padding: "0 1em 0 1em",
+              // padding: "0 1em 0 1em",
             }}
           >
-            {showButton && (
+            {/* {showButton && (
               <Button
                 onClick={() => walletConnectorHandler()}
                 style={{ margin: "1em" }}
@@ -75,28 +55,8 @@ export default function Home() {
               >
                 Connect your Wallet!
               </Button>
-            )}
+            )} */}
 
-            {selectWallet && (
-              <>
-                <Image
-                  className={landingPageStyles.binance}
-                  width={65}
-                  height={65}
-                  src={binanceLogo}
-                  alt="mmmc Logo"
-                  onClick={() => connectBinanceWallet()}
-                />
-                <Image
-                  className={landingPageStyles.metamask}
-                  width={65}
-                  height={65}
-                  src={metamaskLogo}
-                  alt="mmmc Logo"
-                  onClick={() => connectMetamaskWallet()}
-                />
-              </>
-            )}
             {wallet.account && (
               <>
                 <input
